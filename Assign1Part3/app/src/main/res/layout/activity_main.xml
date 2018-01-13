@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="cosc426.assign1part3.MainActivity">
+
+    <TextView
+        android:id="@+id/firstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:text="First Name:"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/inputText"/>
+
+    <EditText
+        android:id="@+id/firstNameInput"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_toRightOf="@+id/firstNameLabel"
+        android:textSize="@dimen/textSize"
+        android:maxLength="10"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/lastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_below="@+id/firstNameInput"
+        android:text="Last Name:"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/inputText"/>
+
+    <EditText
+        android:id="@+id/lastNameInput"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_below="@+id/firstNameLabel"
+        android:layout_toRightOf="@+id/lastNameLabel"
+        android:textSize="@dimen/textSize"
+        android:maxLength="10"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/dobLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_below="@+id/lastNameInput"
+        android:text="Date of Birth:"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/inputText"/>
+
+    <EditText
+        android:id="@+id/dobInput"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_below="@+id/lastNameLabel"
+        android:layout_toRightOf="@+id/dobLabel"
+        android:textSize="@dimen/textSize"
+        android:hint="MM/DD/YYYY"
+        android:maxLength="10"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:text="Generate"
+        android:gravity="center"
+        android:layout_below="@+id/dobLabel"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="generate"
+        android:background="@color/button"/>
+
+    <TextView
+        android:id="@+id/userOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/generateButton"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"
+        android:textSize="@dimen/outputTextSize"
+        android:text="Username:"
+        android:textColor="@color/outputText"/>
+
+    <TextView
+        android:id="@+id/passwordOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userOutput"
+        android:padding="10dp"
+        android:textSize="@dimen/outputTextSize"
+        android:text="Password:"
+        android:textColor="@color/outputText"/>
+
+</RelativeLayout>
